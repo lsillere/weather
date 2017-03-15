@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DA81E79C64E001AF558 /* AppDelegate.swift */; };
+		76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAA1E79C64E001AF558 /* ViewController.swift */; };
+		76656DAE1E79C64E001AF558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76656DAC1E79C64E001AF558 /* Main.storyboard */; };
+		76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAF1E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld */; };
+		76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB21E79C64E001AF558 /* Assets.xcassets */; };
+		76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */; };
+		76656DC11E79C64E001AF558 /* test_iOS_IngimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DC01E79C64E001AF558 /* test_iOS_IngimaTests.swift */; };
+		76656DCC1E79C64E001AF558 /* test_iOS_IngimaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DCB1E79C64E001AF558 /* test_iOS_IngimaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76656DBD1E79C64E001AF558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76656D9D1E79C64E001AF558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76656DA41E79C64E001AF558;
+			remoteInfo = "test iOS Ingima";
+		};
+		76656DC81E79C64E001AF558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76656D9D1E79C64E001AF558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76656DA41E79C64E001AF558;
+			remoteInfo = "test iOS Ingima";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76656DA51E79C64E001AF558 /* test iOS Ingima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test iOS Ingima.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76656DA81E79C64E001AF558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76656DAA1E79C64E001AF558 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76656DAD1E79C64E001AF558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76656DB01E79C64E001AF558 /* test_iOS_Ingima.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test_iOS_Ingima.xcdatamodel; sourceTree = "<group>"; };
+		76656DB21E79C64E001AF558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76656DB51E79C64E001AF558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76656DB71E79C64E001AF558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76656DBC1E79C64E001AF558 /* test iOS IngimaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test iOS IngimaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76656DC01E79C64E001AF558 /* test_iOS_IngimaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_iOS_IngimaTests.swift; sourceTree = "<group>"; };
+		76656DC21E79C64E001AF558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76656DC71E79C64E001AF558 /* test iOS IngimaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test iOS IngimaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76656DCB1E79C64E001AF558 /* test_iOS_IngimaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_iOS_IngimaUITests.swift; sourceTree = "<group>"; };
+		76656DCD1E79C64E001AF558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76656DA21E79C64E001AF558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DB91E79C64E001AF558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DC41E79C64E001AF558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76656D9C1E79C64E001AF558 = {
+			isa = PBXGroup;
+			children = (
+				76656DA71E79C64E001AF558 /* test iOS Ingima */,
+				76656DBF1E79C64E001AF558 /* test iOS IngimaTests */,
+				76656DCA1E79C64E001AF558 /* test iOS IngimaUITests */,
+				76656DA61E79C64E001AF558 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76656DA61E79C64E001AF558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76656DA51E79C64E001AF558 /* test iOS Ingima.app */,
+				76656DBC1E79C64E001AF558 /* test iOS IngimaTests.xctest */,
+				76656DC71E79C64E001AF558 /* test iOS IngimaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76656DA71E79C64E001AF558 /* test iOS Ingima */ = {
+			isa = PBXGroup;
+			children = (
+				76656DA81E79C64E001AF558 /* AppDelegate.swift */,
+				76656DAA1E79C64E001AF558 /* ViewController.swift */,
+				76656DAC1E79C64E001AF558 /* Main.storyboard */,
+				76656DB21E79C64E001AF558 /* Assets.xcassets */,
+				76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */,
+				76656DB71E79C64E001AF558 /* Info.plist */,
+				76656DAF1E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld */,
+			);
+			path = "test iOS Ingima";
+			sourceTree = "<group>";
+		};
+		76656DBF1E79C64E001AF558 /* test iOS IngimaTests */ = {
+			isa = PBXGroup;
+			children = (
+				76656DC01E79C64E001AF558 /* test_iOS_IngimaTests.swift */,
+				76656DC21E79C64E001AF558 /* Info.plist */,
+			);
+			path = "test iOS IngimaTests";
+			sourceTree = "<group>";
+		};
+		76656DCA1E79C64E001AF558 /* test iOS IngimaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				76656DCB1E79C64E001AF558 /* test_iOS_IngimaUITests.swift */,
+				76656DCD1E79C64E001AF558 /* Info.plist */,
+			);
+			path = "test iOS IngimaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76656DA41E79C64E001AF558 /* test iOS Ingima */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76656DD01E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS Ingima" */;
+			buildPhases = (
+				76656DA11E79C64E001AF558 /* Sources */,
+				76656DA21E79C64E001AF558 /* Frameworks */,
+				76656DA31E79C64E001AF558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "test iOS Ingima";
+			productName = "test iOS Ingima";
+			productReference = 76656DA51E79C64E001AF558 /* test iOS Ingima.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76656DBB1E79C64E001AF558 /* test iOS IngimaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76656DD31E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaTests" */;
+			buildPhases = (
+				76656DB81E79C64E001AF558 /* Sources */,
+				76656DB91E79C64E001AF558 /* Frameworks */,
+				76656DBA1E79C64E001AF558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76656DBE1E79C64E001AF558 /* PBXTargetDependency */,
+			);
+			name = "test iOS IngimaTests";
+			productName = "test iOS IngimaTests";
+			productReference = 76656DBC1E79C64E001AF558 /* test iOS IngimaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76656DC61E79C64E001AF558 /* test iOS IngimaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76656DD61E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaUITests" */;
+			buildPhases = (
+				76656DC31E79C64E001AF558 /* Sources */,
+				76656DC41E79C64E001AF558 /* Frameworks */,
+				76656DC51E79C64E001AF558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76656DC91E79C64E001AF558 /* PBXTargetDependency */,
+			);
+			name = "test iOS IngimaUITests";
+			productName = "test iOS IngimaUITests";
+			productReference = 76656DC71E79C64E001AF558 /* test iOS IngimaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76656D9D1E79C64E001AF558 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Loic Sillere";
+				TargetAttributes = {
+					76656DA41E79C64E001AF558 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DC9N7Q7363;
+						ProvisioningStyle = Automatic;
+					};
+					76656DBB1E79C64E001AF558 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DC9N7Q7363;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76656DA41E79C64E001AF558;
+					};
+					76656DC61E79C64E001AF558 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DC9N7Q7363;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 76656DA41E79C64E001AF558;
+					};
+				};
+			};
+			buildConfigurationList = 76656DA01E79C64E001AF558 /* Build configuration list for PBXProject "test iOS Ingima" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76656D9C1E79C64E001AF558;
+			productRefGroup = 76656DA61E79C64E001AF558 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76656DA41E79C64E001AF558 /* test iOS Ingima */,
+				76656DBB1E79C64E001AF558 /* test iOS IngimaTests */,
+				76656DC61E79C64E001AF558 /* test iOS IngimaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76656DA31E79C64E001AF558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */,
+				76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */,
+				76656DAE1E79C64E001AF558 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DBA1E79C64E001AF558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DC51E79C64E001AF558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76656DA11E79C64E001AF558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */,
+				76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */,
+				76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DB81E79C64E001AF558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76656DC11E79C64E001AF558 /* test_iOS_IngimaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76656DC31E79C64E001AF558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76656DCC1E79C64E001AF558 /* test_iOS_IngimaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76656DBE1E79C64E001AF558 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76656DA41E79C64E001AF558 /* test iOS Ingima */;
+			targetProxy = 76656DBD1E79C64E001AF558 /* PBXContainerItemProxy */;
+		};
+		76656DC91E79C64E001AF558 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76656DA41E79C64E001AF558 /* test iOS Ingima */;
+			targetProxy = 76656DC81E79C64E001AF558 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76656DAC1E79C64E001AF558 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76656DAD1E79C64E001AF558 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76656DB51E79C64E001AF558 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76656DCE1E79C64E001AF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76656DCF1E79C64E001AF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76656DD11E79C64E001AF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS Ingima/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-Ingima";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		76656DD21E79C64E001AF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS Ingima/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-Ingima";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		76656DD41E79C64E001AF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS IngimaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-IngimaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test iOS Ingima.app/test iOS Ingima";
+			};
+			name = Debug;
+		};
+		76656DD51E79C64E001AF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS IngimaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-IngimaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test iOS Ingima.app/test iOS Ingima";
+			};
+			name = Release;
+		};
+		76656DD71E79C64E001AF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS IngimaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-IngimaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "test iOS Ingima";
+			};
+			name = Debug;
+		};
+		76656DD81E79C64E001AF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = DC9N7Q7363;
+				INFOPLIST_FILE = "test iOS IngimaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Loic-Sillere.test-iOS-IngimaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "test iOS Ingima";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76656DA01E79C64E001AF558 /* Build configuration list for PBXProject "test iOS Ingima" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76656DCE1E79C64E001AF558 /* Debug */,
+				76656DCF1E79C64E001AF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76656DD01E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS Ingima" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76656DD11E79C64E001AF558 /* Debug */,
+				76656DD21E79C64E001AF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		76656DD31E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76656DD41E79C64E001AF558 /* Debug */,
+				76656DD51E79C64E001AF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		76656DD61E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76656DD71E79C64E001AF558 /* Debug */,
+				76656DD81E79C64E001AF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76656DAF1E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76656DB01E79C64E001AF558 /* test_iOS_Ingima.xcdatamodel */,
+			);
+			currentVersion = 76656DB01E79C64E001AF558 /* test_iOS_Ingima.xcdatamodel */;
+			path = test_iOS_Ingima.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 76656D9D1E79C64E001AF558 /* Project object */;
+}
