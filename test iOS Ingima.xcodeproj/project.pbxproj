@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761AC1CE1E79D5F7000DBC3A /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761AC1CD1E79D5F7000DBC3A /* Gloss.framework */; };
+		761AC1D11E79D62C000DBC3A /* forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D01E79D62C000DBC3A /* forecast.swift */; };
+		761AC1D31E79F058000DBC3A /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D21E79F058000DBC3A /* WeatherTableViewCell.swift */; };
+		761AC1D51E79FEE1000DBC3A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D41E79FEE1000DBC3A /* Weather.swift */; };
+		765FC8311E7C08D200679DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765FC8301E7C08D100679DDB /* Main.storyboard */; };
 		76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DA81E79C64E001AF558 /* AppDelegate.swift */; };
 		76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAA1E79C64E001AF558 /* ViewController.swift */; };
-		76656DAE1E79C64E001AF558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76656DAC1E79C64E001AF558 /* Main.storyboard */; };
 		76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAF1E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld */; };
 		76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB21E79C64E001AF558 /* Assets.xcassets */; };
 		76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */; };
 		76656DC11E79C64E001AF558 /* test_iOS_IngimaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DC01E79C64E001AF558 /* test_iOS_IngimaTests.swift */; };
 		76656DCC1E79C64E001AF558 /* test_iOS_IngimaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DCB1E79C64E001AF558 /* test_iOS_IngimaUITests.swift */; };
+		76656DDA1E79CB9A001AF558 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76656DD91E79CB9A001AF558 /* Alamofire.framework */; };
+		76CBD6881E7AB219005B95CB /* city.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD6871E7AB219005B95CB /* city.swift */; };
+		76CBD68A1E7AB429005B95CB /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD6891E7AB429005B95CB /* SearchCityViewController.swift */; };
+		76CBD68E1E7ABE46005B95CB /* cityListFrance.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CBD68D1E7ABE46005B95CB /* cityListFrance.json */; };
+		76CBD6901E7AC602005B95CB /* MyCityListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD68F1E7AC602005B95CB /* MyCityListTableViewController.swift */; };
+		76CBD6921E7AC7BC005B95CB /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD6911E7AC7BC005B95CB /* CoredataManager.swift */; };
+		76CBD6941E7B13DE005B95CB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD6931E7B13DE005B95CB /* APIManager.swift */; };
+		76CBD6961E7B4522005B95CB /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CBD6951E7B4521005B95CB /* CitiesTableViewCell.swift */; };
+		AB08F439C1BD866C9C1E6236 /* Pods_test_iOS_Ingima.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7720D52182D43BD241870A /* Pods_test_iOS_Ingima.framework */; };
+		AEF1E429FCF16A0902255171 /* Pods_test_iOS_IngimaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EE87B8872594A85CFA8E7D /* Pods_test_iOS_IngimaUITests.framework */; };
+		E470B4529616AE2FE81068DE /* Pods_test_iOS_IngimaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191A6DEF3D04C6F1282CB46F /* Pods_test_iOS_IngimaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191A6DEF3D04C6F1282CB46F /* Pods_test_iOS_IngimaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_iOS_IngimaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24FE5EB0252BC240B741FB9B /* Pods-test iOS IngimaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS IngimaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS IngimaTests/Pods-test iOS IngimaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B7720D52182D43BD241870A /* Pods_test_iOS_Ingima.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_iOS_Ingima.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		761AC1CD1E79D5F7000DBC3A /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = "../../Library/Developer/Xcode/DerivedData/test_iOS_Ingima-hferftoowspmvnfbyyuzhlauyzby/Build/Products/Debug-iphonesimulator/Gloss/Gloss.framework"; sourceTree = "<group>"; };
+		761AC1D01E79D62C000DBC3A /* forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = forecast.swift; sourceTree = "<group>"; };
+		761AC1D21E79F058000DBC3A /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		761AC1D41E79FEE1000DBC3A /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		765FC8301E7C08D100679DDB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76656DA51E79C64E001AF558 /* test iOS Ingima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test iOS Ingima.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76656DA81E79C64E001AF558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76656DAA1E79C64E001AF558 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76656DAD1E79C64E001AF558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76656DB01E79C64E001AF558 /* test_iOS_Ingima.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test_iOS_Ingima.xcdatamodel; sourceTree = "<group>"; };
 		76656DB21E79C64E001AF558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76656DB51E79C64E001AF558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +71,20 @@
 		76656DC71E79C64E001AF558 /* test iOS IngimaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test iOS IngimaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76656DCB1E79C64E001AF558 /* test_iOS_IngimaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_iOS_IngimaUITests.swift; sourceTree = "<group>"; };
 		76656DCD1E79C64E001AF558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76656DD91E79CB9A001AF558 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/test_iOS_Ingima-hferftoowspmvnfbyyuzhlauyzby/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		76CBD6871E7AB219005B95CB /* city.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = city.swift; sourceTree = "<group>"; };
+		76CBD6891E7AB429005B95CB /* SearchCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
+		76CBD68D1E7ABE46005B95CB /* cityListFrance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cityListFrance.json; sourceTree = "<group>"; };
+		76CBD68F1E7AC602005B95CB /* MyCityListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCityListTableViewController.swift; sourceTree = "<group>"; };
+		76CBD6911E7AC7BC005B95CB /* CoredataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
+		76CBD6931E7B13DE005B95CB /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		76CBD6951E7B4521005B95CB /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
+		7C863478A8DDA89B84D64041 /* Pods-test iOS Ingima.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS Ingima.release.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS Ingima/Pods-test iOS Ingima.release.xcconfig"; sourceTree = "<group>"; };
+		7F56AFBECDDA4C0BBAF95872 /* Pods-test iOS Ingima.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS Ingima.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS Ingima/Pods-test iOS Ingima.debug.xcconfig"; sourceTree = "<group>"; };
+		85EE87B8872594A85CFA8E7D /* Pods_test_iOS_IngimaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_iOS_IngimaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0961C4DFC1BB4AA3957D0D3 /* Pods-test iOS IngimaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS IngimaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS IngimaUITests/Pods-test iOS IngimaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A94A754E74C9C0DE8F96FC9F /* Pods-test iOS IngimaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS IngimaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS IngimaTests/Pods-test iOS IngimaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE463B90CEC30A5DFE3F0EAA /* Pods-test iOS IngimaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test iOS IngimaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-test iOS IngimaUITests/Pods-test iOS IngimaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761AC1CE1E79D5F7000DBC3A /* Gloss.framework in Frameworks */,
+				76656DDA1E79CB9A001AF558 /* Alamofire.framework in Frameworks */,
+				AB08F439C1BD866C9C1E6236 /* Pods_test_iOS_Ingima.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E470B4529616AE2FE81068DE /* Pods_test_iOS_IngimaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +110,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF1E429FCF16A0902255171 /* Pods_test_iOS_IngimaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D4C3ADB096208EE38D976CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				761AC1CD1E79D5F7000DBC3A /* Gloss.framework */,
+				76656DD91E79CB9A001AF558 /* Alamofire.framework */,
+				3B7720D52182D43BD241870A /* Pods_test_iOS_Ingima.framework */,
+				191A6DEF3D04C6F1282CB46F /* Pods_test_iOS_IngimaTests.framework */,
+				85EE87B8872594A85CFA8E7D /* Pods_test_iOS_IngimaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		761AC1CF1E79D616000DBC3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				761AC1D01E79D62C000DBC3A /* forecast.swift */,
+				761AC1D41E79FEE1000DBC3A /* Weather.swift */,
+				76CBD6871E7AB219005B95CB /* city.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		76656D9C1E79C64E001AF558 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +146,8 @@
 				76656DBF1E79C64E001AF558 /* test iOS IngimaTests */,
 				76656DCA1E79C64E001AF558 /* test iOS IngimaUITests */,
 				76656DA61E79C64E001AF558 /* Products */,
+				DC9CA843E9EC6B71424E5647 /* Pods */,
+				6D4C3ADB096208EE38D976CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +164,17 @@
 		76656DA71E79C64E001AF558 /* test iOS Ingima */ = {
 			isa = PBXGroup;
 			children = (
+				76CBD6841E7AB16D005B95CB /* Resources */,
+				761AC1CF1E79D616000DBC3A /* Model */,
 				76656DA81E79C64E001AF558 /* AppDelegate.swift */,
 				76656DAA1E79C64E001AF558 /* ViewController.swift */,
-				76656DAC1E79C64E001AF558 /* Main.storyboard */,
+				76CBD68F1E7AC602005B95CB /* MyCityListTableViewController.swift */,
+				76CBD6891E7AB429005B95CB /* SearchCityViewController.swift */,
+				76CBD6911E7AC7BC005B95CB /* CoredataManager.swift */,
+				76CBD6931E7B13DE005B95CB /* APIManager.swift */,
+				761AC1D21E79F058000DBC3A /* WeatherTableViewCell.swift */,
+				76CBD6951E7B4521005B95CB /* CitiesTableViewCell.swift */,
+				765FC8301E7C08D100679DDB /* Main.storyboard */,
 				76656DB21E79C64E001AF558 /* Assets.xcassets */,
 				76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */,
 				76656DB71E79C64E001AF558 /* Info.plist */,
@@ -128,6 +201,27 @@
 			path = "test iOS IngimaUITests";
 			sourceTree = "<group>";
 		};
+		76CBD6841E7AB16D005B95CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76CBD68D1E7ABE46005B95CB /* cityListFrance.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DC9CA843E9EC6B71424E5647 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F56AFBECDDA4C0BBAF95872 /* Pods-test iOS Ingima.debug.xcconfig */,
+				7C863478A8DDA89B84D64041 /* Pods-test iOS Ingima.release.xcconfig */,
+				A94A754E74C9C0DE8F96FC9F /* Pods-test iOS IngimaTests.debug.xcconfig */,
+				24FE5EB0252BC240B741FB9B /* Pods-test iOS IngimaTests.release.xcconfig */,
+				A0961C4DFC1BB4AA3957D0D3 /* Pods-test iOS IngimaUITests.debug.xcconfig */,
+				CE463B90CEC30A5DFE3F0EAA /* Pods-test iOS IngimaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76656DD01E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS Ingima" */;
 			buildPhases = (
+				D6486FB91A689C87C5CAC885 /* [CP] Check Pods Manifest.lock */,
 				76656DA11E79C64E001AF558 /* Sources */,
 				76656DA21E79C64E001AF558 /* Frameworks */,
 				76656DA31E79C64E001AF558 /* Resources */,
+				8B3FF23A17688A12EEC9675C /* [CP] Embed Pods Frameworks */,
+				4BAA5370F5941D741A2E12DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76656DD31E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaTests" */;
 			buildPhases = (
+				582B0B914FF81C2308D85052 /* [CP] Check Pods Manifest.lock */,
 				76656DB81E79C64E001AF558 /* Sources */,
 				76656DB91E79C64E001AF558 /* Frameworks */,
 				76656DBA1E79C64E001AF558 /* Resources */,
+				BB0350D6FD45E908EFFD0121 /* [CP] Embed Pods Frameworks */,
+				FA0831133645DB4E1167341F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76656DD61E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaUITests" */;
 			buildPhases = (
+				C21C53014FC875C2D875D2CC /* [CP] Check Pods Manifest.lock */,
 				76656DC31E79C64E001AF558 /* Sources */,
 				76656DC41E79C64E001AF558 /* Frameworks */,
 				76656DC51E79C64E001AF558 /* Resources */,
+				579B556740C55DAD3EB54316 /* [CP] Embed Pods Frameworks */,
+				7C3D4C04BE071AF57FF2EF85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,8 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */,
+				765FC8311E7C08D200679DDB /* Main.storyboard in Resources */,
 				76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */,
-				76656DAE1E79C64E001AF558 /* Main.storyboard in Resources */,
+				76CBD68E1E7ABE46005B95CB /* cityListFrance.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,14 +364,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BAA5370F5941D741A2E12DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS Ingima/Pods-test iOS Ingima-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		579B556740C55DAD3EB54316 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS IngimaUITests/Pods-test iOS IngimaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		582B0B914FF81C2308D85052 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C3D4C04BE071AF57FF2EF85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS IngimaUITests/Pods-test iOS IngimaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B3FF23A17688A12EEC9675C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS Ingima/Pods-test iOS Ingima-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0350D6FD45E908EFFD0121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS IngimaTests/Pods-test iOS IngimaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C21C53014FC875C2D875D2CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6486FB91A689C87C5CAC885 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0831133645DB4E1167341F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test iOS IngimaTests/Pods-test iOS IngimaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76656DA11E79C64E001AF558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CBD6961E7B4522005B95CB /* CitiesTableViewCell.swift in Sources */,
+				761AC1D31E79F058000DBC3A /* WeatherTableViewCell.swift in Sources */,
+				761AC1D11E79D62C000DBC3A /* forecast.swift in Sources */,
+				76CBD6881E7AB219005B95CB /* city.swift in Sources */,
 				76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */,
+				76CBD6941E7B13DE005B95CB /* APIManager.swift in Sources */,
 				76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */,
+				761AC1D51E79FEE1000DBC3A /* Weather.swift in Sources */,
+				76CBD6921E7AC7BC005B95CB /* CoredataManager.swift in Sources */,
 				76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */,
+				76CBD6901E7AC602005B95CB /* MyCityListTableViewController.swift in Sources */,
+				76CBD68A1E7AB429005B95CB /* SearchCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +554,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76656DAC1E79C64E001AF558 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76656DAD1E79C64E001AF558 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -417,6 +660,7 @@
 		};
 		76656DD11E79C64E001AF558 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F56AFBECDDA4C0BBAF95872 /* Pods-test iOS Ingima.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DC9N7Q7363;
@@ -430,6 +674,7 @@
 		};
 		76656DD21E79C64E001AF558 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C863478A8DDA89B84D64041 /* Pods-test iOS Ingima.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DC9N7Q7363;
@@ -443,6 +688,7 @@
 		};
 		76656DD41E79C64E001AF558 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94A754E74C9C0DE8F96FC9F /* Pods-test iOS IngimaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +704,7 @@
 		};
 		76656DD51E79C64E001AF558 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24FE5EB0252BC240B741FB9B /* Pods-test iOS IngimaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +720,7 @@
 		};
 		76656DD71E79C64E001AF558 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0961C4DFC1BB4AA3957D0D3 /* Pods-test iOS IngimaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DC9N7Q7363;
@@ -487,6 +735,7 @@
 		};
 		76656DD81E79C64E001AF558 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE463B90CEC30A5DFE3F0EAA /* Pods-test iOS IngimaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DC9N7Q7363;
@@ -518,6 +767,7 @@
 				76656DD21E79C64E001AF558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76656DD31E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +776,7 @@
 				76656DD51E79C64E001AF558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76656DD61E79C64E001AF558 /* Build configuration list for PBXNativeTarget "test iOS IngimaUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +785,7 @@
 				76656DD81E79C64E001AF558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
