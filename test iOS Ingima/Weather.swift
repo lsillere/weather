@@ -23,8 +23,6 @@ public struct Weather:Decodable {
     public var visibility: Int?
     public var cityId: Int?
     public var countryCode: String?
-    
-    
     public var tempMin: Double?
     public var tempMax: Double?
     public var date: Date?

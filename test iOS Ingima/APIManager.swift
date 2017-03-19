@@ -18,9 +18,7 @@ class APIManager {
         
         Alamofire.request(
             url,
-            parameters: parameters/*,
-            headers: ["Authorization": "9e6f732dad3cc14c1004c9907e17f0cd"]*/
-            )
+            parameters: parameters)
             .responseJSON { response in
                 guard response.result.isSuccess else {
                     print("Error while fetching tags: \(response.result.error)")

@@ -19,13 +19,13 @@ public class Cities: Decodable {
     
 }
 
+
 public class CitySaved: Decodable {
     public var id: Int?
     public var country: String?
     public var name: String?
     public var lat: String?
     public var long: String?
-    public var weather: Weather?
     
     public required init?(json: JSON) {
         self.id = ("_id" <~~ json)!
@@ -40,33 +40,6 @@ public class CitySaved: Decodable {
     public init?(lat: String, long: String) {
         self.lat = lat
         self.long = long
-    }
-    
-    func fetchWeather(completion: @escaping () -> Void) {
-        let api = APIManager()
-        
-        if let lat = self.lat,
-            let long = self.long {
-            let parameters = ["lat" : lat.description, "lon" : long.description]
-            api.download(request: "id",
-                         url: "http://api.openweathermap.org/data/2.5/weather",
-                         city: "",
-                         parametersReceived: parameters,
-                         completion: { json in
-                            self.weather  = Weather.init(jsonToday: json)!
-            })
-        } else if let id = self.id {
-            print("test id: ", String(describing: id))
-            let parameters = ["id" : String(describing: id)]
-            api.download(request: "id",
-                         url: "http://api.openweathermap.org/data/2.5/weather",
-                         city: "",
-                         parametersReceived: parameters,
-                         completion: { json in
-                            self.weather  = Weather.init(jsonToday: json)!
-                            
-            })
-        }
-    }
+    }    
 }
 

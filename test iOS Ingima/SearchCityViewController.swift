@@ -39,82 +39,39 @@ class SearchCityViewController: UITableViewController, UISearchResultsUpdating {
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        
-        
-        /*let url = Bundle.main.url(forResource: "cityListFrance", withExtension: "json")
-        
-        // Load Data
-        let data = try! Data(contentsOf: url!)
-        
-        // Deserialize JSON
-        if let JSON = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-            cities = Cities.init(json: JSON)
-            //filteredCities = cities
-            tableView.reloadData()
-        }*/
-        
-        filteredCities = []
-        //cities = []
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(false, animated:true)
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        /*guard let count = cities?.cities?.count else {
-            return 0
-        }
-        if searchController.isActive && searchController.searchBar.text != "" {
-            return filteredCities.count
-        }*/
        
         return filteredCities.count
-        /*if searchController.isActive && searchController.searchBar.text != "" {
-            guard let countSearch = filteredCities?.cities?.count else {
-                return 0
-            }
-            return
-        }*/
-        
-        //return count
     }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let city: String
-        //if searchController.isActive && searchController.searchBar.text != "" {
-            let cityName = filteredCities[indexPath.row].value(forKeyPath: "name") as! String
-            let country = filteredCities[indexPath.row].value(forKeyPath: "country") as! String
-            city = cityName + " (" + country + ")"
-        /*} else {
-            city = (cities?.cities?[indexPath.row].name)!
-        }*/
+        let cityName = filteredCities[indexPath.row].value(forKeyPath: "name") as! String
+        let country = filteredCities[indexPath.row].value(forKeyPath: "country") as! String
         
-        cell.textLabel?.text = city
+        cell.textLabel?.text = cityName + " (" + country + ")"
         
         return cell
     }
+    
     
     public func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
     
     
-    /*------------------------ Filtered table view with searh result -------------------- */
+    /*------------------------ Filtered table view with searh result ------------------------------ */
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         /*filteredCities?.cities = cities?.cities?.filter { citiesFind in
             print("filter 2", citiesFind.name)
@@ -130,23 +87,10 @@ class SearchCityViewController: UITableViewController, UISearchResultsUpdating {
         tableView.reloadData()
     }
     
-    
+    /*------------------------ Selection of a city -> save her ID in coreData -------------------- */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected : ", indexPath)
         
         let coreData = coredataManager()
         coreData.saveCityID(id: (filteredCities[indexPath.row].value(forKeyPath: "id") as! Int))
-        //self.performSegueWithIdentifier("yourIdentifier", sender: self)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -12,7 +12,6 @@ import CoreLocation
 
 class MyCityListTableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    //var savedCitiesId: [Int] = []
     var savedCitiesCoreData: [NSManagedObject] = []
     var savedCities: [CitySaved] = []
     let locationManager = CLLocationManager()
@@ -23,28 +22,19 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-        
+        /* --------------------------------- Set up Cities -------------------------------*/
         let coreData = coredataManager()
         savedCitiesCoreData = coreData.getMyCities()
-        //coreData.getCity()
-        //coreData.myFetchRequest()
         
         for city in savedCitiesCoreData {
             if let city = CitySaved.init(id: city.value(forKeyPath: "id") as! Int) {
-                savedCities.append(city)
+                self.savedCities.append(city)
             }
         }
-        /*for city in savedCitiesCoreData {
-            if let city = City.init(id: city.value(forKeyPath: "id") as! Int) {
-                savedCities.append(city)
-            }
-        }*/
-        
-        tableView.reloadData()
+
 
         /* --------------------------------- Set up location -------------------------------*/
-        // Ask for Authorisation from the User.
+        // Ask for Authorisation from the user
         self.locationManager.requestAlwaysAuthorization()
         
         // For use in foreground
@@ -67,20 +57,12 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
             print("Location services are not enabled")
         }
         
-        
-        //setWeatherForCity()
-        
         /* --------------------------------- Set up refresh control -------------------------*/
         self.refreshControlAction.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControlAction.addTarget(self, action: #selector(refreshData(sender:)), for: UIControlEvents.valueChanged)
         self.tableView?.addSubview(refreshControlAction)
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,11 +85,7 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CitiesTableViewCell
         let api = APIManager()
         
-        /*if let weather = savedCities[indexPath.row].weather {
-            print("test weather exist")
-            self.setLabel(todayWeather: weather, cell: cell)
-        }*/
-        
+        // First city come from my location dans can be founc from lat and lon
         if(indexPath.row == 0 && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)) {
             if let long = self.long,
                 let lat = self.lat {
@@ -123,9 +101,8 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                                 self.setLabel(todayWeather: todayWeather, cell: cell, isUserLocation: true)
                 })
             }
-        } else {
+        } else { // Other cities comes from CoreData and can be found from id
             if let cityId = savedCities[indexPath.row].id {
-                //self.setLabel(todayWeather: savedCities[indexPath.row].weather!, cell: cell)
                 let parameters = ["id" : String(describing: cityId)]
                 api.download(request: "id",
                              url: "http://api.openweathermap.org/data/2.5/weather",
@@ -143,9 +120,8 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if indexPath.row == 0 && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
+            if !(indexPath.row == 0 && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)) {
                 
-            } else {
                 let coreData = coredataManager()
                 if savedCities.count > savedCitiesCoreData.count {
                     coreData.delete(objectToDelete: savedCitiesCoreData[indexPath.row - 1])
@@ -154,58 +130,17 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                     coreData.delete(objectToDelete: savedCitiesCoreData[indexPath.row])
                     savedCitiesCoreData.remove(at: indexPath.row)
                 }
+                
+                savedCities.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
-            
-            savedCities.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
     func refreshData(sender: UIRefreshControl) {
-        //fetchFixtures()
         tableView.reloadData()
         refreshControlAction.endRefreshing()
     }
-    
-    /*func fetchWeatherForCity() {
-        let api = APIManager()
-        
-        for i in 0...savedCities.count {
-            if(i == 0 && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)) {
-                if let long = self.long,
-                    let lat = self.lat {
-                    
-                    let parameters = ["lat" : lat.description, "lon" : long.description]
-                    api.download(request: "id",
-                                 url: "http://api.openweathermap.org/data/2.5/weather",
-                                 city: "",
-                                 parametersReceived: parameters,
-                                 completion: { json in
-                                    self.savedCities[i].weather = Weather.init(jsonToday: json)!
-                                    self.savedCities[i].id = self.savedCities[i].id
-                                    //print("today weather ID : ", todayWeather.cityId)
-                                    //self.setLabel(todayWeather: todayWeather, cell: cell)
-                    })
-                }
-            } else {
-                print("id:", String(describing: savedCities[i].id))
-                if let cityId = savedCities[i].id {
-                    //self.setLabel(todayWeather: savedCities[indexPath.row].weather!, cell: cell)
-                    let parameters = ["id" : String(describing: cityId)]
-                     api.download(request: "id",
-                                  url: "http://api.openweathermap.org/data/2.5/weather",
-                                  city: "",
-                                  parametersReceived: parameters,
-                                  completion: { json in
-                                    self.savedCities[i].weather = Weather.init(jsonToday: json)!
-                     //let todayWeather = Weather.init(jsonToday: json)!
-                     //self.setLabel(todayWeather: todayWeather, cell: cell)
-                     })
-                }
-            }
-
-        }
-    }*/
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0]

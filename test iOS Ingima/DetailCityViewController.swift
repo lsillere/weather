@@ -21,7 +21,7 @@ extension Date {
         let strHour = String(format: "%02d", hour)
         let strMinutes = String(format: "%02d", minutes)
         
-        return "\(strHour):\(strMinutes)"//self.components(separatedBy: "/").last?.components(separatedBy: ".").first.flatMap{Int($0)}
+        return "\(strHour):\(strMinutes)"
     }
     
     func getDayOfWeekName() -> String? {
@@ -91,26 +91,6 @@ class DetailCityViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        // Ask for Authorisation from the User.
-        /*self.locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }*/
-        
-        
-        /*downloadTags(contentID: "test")
-        downloadTodayWeather(contentID: "test")*/
-        /*{ tags in
-            completion(tags, [PhotoColor]())
-        }*/
         
         if let city = selectedCity {
             let api = APIManager()
@@ -139,9 +119,6 @@ class DetailCityViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
     }
-
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -188,14 +165,6 @@ class DetailCityViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         return count
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userLocation:CLLocation = locations[0]
-        let long = userLocation.coordinate.longitude;
-        let lat = userLocation.coordinate.latitude;
-        //Do What ever you want with it
-        print("long : \(long), lat : \(lat)")
     }
     
     func labelMapping() {

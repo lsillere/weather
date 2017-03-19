@@ -33,33 +33,6 @@ class coredataManager {
         }
     }
 
-    /*func getMyCitiesId() -> [Int] {
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return []
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "MyCities")
-        
-        var myCitiesId: [Int] = []
-        
-        do {
-            let cities = try managedContext.fetch(fetchRequest)
-            print("cities: ", cities)
-            
-            for element in cities {
-                myCitiesId.append(element.value(forKeyPath: "id") as! Int)
-            }
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        
-        return myCitiesId
-    }*/
     
     func getMyCities() -> [NSManagedObject] {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -81,6 +54,7 @@ class coredataManager {
         return cities
     }
     
+    
     func delete(objectToDelete: NSManagedObject) {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -92,29 +66,7 @@ class coredataManager {
         managedContext.delete(objectToDelete)
         appDelegate.saveContext()
     }
-
-    /*func getCity() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "City")
-        
-        var cities: [NSManagedObject] = []
-        
-        do {
-            cities = try managedContext.fetch(fetchRequest)
-            /*for element in cities {
-                let test = element.value(forKeyPath: "id")
-                print("\(test)")
-            }*/
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        
-    }*/
+    
     
     func myFetchRequest(searchText: String) -> [NSManagedObject]
     {
@@ -124,12 +76,6 @@ class coredataManager {
         
         let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
-        /*guard let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext else {
-            return
-        }*/
-
-        
-        //var savedCitiesCoreData: NSManagedObject
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "City")
         

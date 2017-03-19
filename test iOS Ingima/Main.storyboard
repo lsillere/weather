@@ -180,7 +180,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0E1-8c-68q">
                                 <rect key="frame" x="57" y="84" width="263" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -439,6 +439,6 @@
         <image name="menu-icon" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dvA-qH-fNf"/>
+        <segue reference="Rfi-TN-LAz"/>
     </inferredMetricsTieBreakers>
 </document>
