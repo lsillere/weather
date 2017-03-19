@@ -33,7 +33,7 @@ class coredataManager {
         }
     }
 
-    func getMyCitiesId() -> [Int] {
+    /*func getMyCitiesId() -> [Int] {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return []
@@ -59,7 +59,7 @@ class coredataManager {
         }
         
         return myCitiesId
-    }
+    }*/
     
     func getMyCities() -> [NSManagedObject] {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -89,10 +89,60 @@ class coredataManager {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        //let moc = appDelegate.managedObjectContext!
-        
         managedContext.delete(objectToDelete)
         appDelegate.saveContext()
+    }
+
+    /*func getCity() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "City")
+        
+        var cities: [NSManagedObject] = []
+        
+        do {
+            cities = try managedContext.fetch(fetchRequest)
+            /*for element in cities {
+                let test = element.value(forKeyPath: "id")
+                print("\(test)")
+            }*/
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    }*/
+    
+    func myFetchRequest(searchText: String) -> [NSManagedObject]
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return []
+        }
+        
+        let context:NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        /*guard let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext else {
+            return
+        }*/
+
+        
+        //var savedCitiesCoreData: NSManagedObject
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "City")
+        
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS[cd] %@", searchText)
+
+        do{
+            let results = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+            return results as! [NSManagedObject]
+        } catch let error{
+            print(error)
+        }
+        
+        return []
     }
 
 }

@@ -14,7 +14,7 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
     
     //var savedCitiesId: [Int] = []
     var savedCitiesCoreData: [NSManagedObject] = []
-    var savedCities: [City] = []
+    var savedCities: [CitySaved] = []
     let locationManager = CLLocationManager()
     var lat: CLLocationDegrees?
     var long: CLLocationDegrees?
@@ -27,9 +27,11 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
         
         let coreData = coredataManager()
         savedCitiesCoreData = coreData.getMyCities()
+        //coreData.getCity()
+        //coreData.myFetchRequest()
         
-        for i in 0...savedCitiesCoreData.count - 1 {
-            if let city = City.init(id: savedCitiesCoreData[i].value(forKeyPath: "id") as! Int) {
+        for city in savedCitiesCoreData {
+            if let city = CitySaved.init(id: city.value(forKeyPath: "id") as! Int) {
                 savedCities.append(city)
             }
         }
@@ -57,7 +59,7 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                 locationManager.delegate = self
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager.startUpdatingLocation()
-                if let city = City.init(lat: "", long: "") {
+                if let city = CitySaved.init(lat: "", long: "") {
                     savedCities.insert(city, at: 0)
                 }
             }
@@ -85,11 +87,6 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationItem.setHidesBackButton(false, animated:true)
-        super.viewWillDisappear(animated)
-    }
 
     // MARK: - Table view data source
 
@@ -114,7 +111,6 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
         if(indexPath.row == 0 && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse)) {
             if let long = self.long,
                 let lat = self.lat {
-                //print("long : \(long.description), lat : \(lat.description)")
             
                 let parameters = ["lat" : lat.description, "lon" : long.description]
                 api.download(request: "id",
@@ -124,12 +120,10 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                              completion: { json in
                                 let todayWeather = Weather.init(jsonToday: json)!
                                 self.savedCities[indexPath.row].id = todayWeather.cityId
-                                print("today weather ID : ", todayWeather.cityId)
-                                self.setLabel(todayWeather: todayWeather, cell: cell)
+                                self.setLabel(todayWeather: todayWeather, cell: cell, isUserLocation: true)
                 })
             }
         } else {
-            print("id:", String(describing: savedCities[indexPath.row].id))
             if let cityId = savedCities[indexPath.row].id {
                 //self.setLabel(todayWeather: savedCities[indexPath.row].weather!, cell: cell)
                 let parameters = ["id" : String(describing: cityId)]
@@ -139,7 +133,7 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                              parametersReceived: parameters,
                              completion: { json in
                                 let todayWeather = Weather.init(jsonToday: json)!
-                                self.setLabel(todayWeather: todayWeather, cell: cell)
+                                self.setLabel(todayWeather: todayWeather, cell: cell, isUserLocation: false)
                 })
             }
         }
@@ -169,11 +163,11 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
     
     func refreshData(sender: UIRefreshControl) {
         //fetchFixtures()
-        
+        tableView.reloadData()
         refreshControlAction.endRefreshing()
     }
     
-    func fetchWeatherForCity() {
+    /*func fetchWeatherForCity() {
         let api = APIManager()
         
         for i in 0...savedCities.count {
@@ -188,7 +182,6 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
                                  parametersReceived: parameters,
                                  completion: { json in
                                     self.savedCities[i].weather = Weather.init(jsonToday: json)!
-                                    //let todayWeather = Weather.init(jsonToday: json)!
                                     self.savedCities[i].id = self.savedCities[i].id
                                     //print("today weather ID : ", todayWeather.cityId)
                                     //self.setLabel(todayWeather: todayWeather, cell: cell)
@@ -212,7 +205,7 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
             }
 
         }
-    }
+    }*/
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0]
@@ -235,26 +228,19 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
             let index = tableView.indexPath(for: selectedCell)
             if let indexPath = index?.row {
                 if let id = savedCities[indexPath].id {
-                    let viewController = segue.destination as! ViewController
+                    let viewController = segue.destination as! DetailCityViewController
                     viewController.selectedCity = String(id)
                 }
-                /*if searchController.isActive && searchController.searchBar.text != "" {
-                    tableVC.selectedCamera = filteredCameras[indexPath]
-                    // test with unwind segue : pickedCamera = filteredCameras[indexPath]
-                } else {
-                    tableVC.selectedCamera = cameras[indexPath]
-                    // test with unwind segue : pickedCamera = cameras[indexPath]
-                }*/
             }
         }
     }
     
-    func setLabel(todayWeather: Weather, cell: CitiesTableViewCell) {
+    func setLabel(todayWeather: Weather, cell: CitiesTableViewCell, isUserLocation: Bool) {
         if let cityName = todayWeather.cityName {
             cell.cityNameLabel.text = cityName
             
             if let actualTemp = todayWeather.temp {
-                cell.actualTempLabel.text = actualTemp.description + " °"
+                cell.actualTempLabel.text = actualTemp.description + "°"
             }else  {
                 cell.actualTempLabel.text = "-"
             }
@@ -262,6 +248,15 @@ class MyCityListTableViewController: UITableViewController, CLLocationManagerDel
             if let weatherIcon = todayWeather.getWeatherIcon() {
                 cell.weatherIcon.image = UIImage(named: weatherIcon)
             }
+            
+            if let country = todayWeather.countryCode {
+                cell.countryCodeLabel.text = country
+            }
+            
+            if isUserLocation {
+                cell.locationArrowImage.isHidden = false
+            }
+            
         } else {
             cell.cityNameLabel.text = ""
         }

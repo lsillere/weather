@@ -54,6 +54,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "test_iOS_Ingima")
+        
+        /*if !FileManager.default.fileExistsAtPath(url.path!) {
+            let sourceSqliteURLs = [Bundle.main.url(forResource: "CoreDataPrepopulate", withExtension: "sqlite")!, Bundle.main.url(forResource: "CoreDataPrepopulate", withExtension: "sqlite-wal")!, Bundle.main.url(forResource: "CoreDataPrepopulate", withExtension: "sqlite-shm")!]
+            
+            let destSqliteURLs = [self.applicationDocumentsDirectory.URLByAppendingPathComponent("CoreDataPrepopulate.sqlite"),
+                                  self.applicationDocumentsDirectory.URLByAppendingPathComponent("CoreDataPrepopulate.sqlite-wal"),
+                                  self.applicationDocumentsDirectory.URLByAppendingPathComponent("CoreDataPrepopulate.sqlite-shm")]
+            
+            var error:NSError? = nil
+            for i in 0...sourceSqliteURLs.count {
+                FileManager.default.copyItemAtURL(sourceSqliteURLs[i], toURL: destSqliteURLs[i], error: &error)
+            }
+        }*/
+        
+        let seededData: String = "test_iOS_Ingima"
+        var persistentStoreDescriptions: NSPersistentStoreDescription
+        
+        let directory = NSPersistentContainer.defaultDirectoryURL()
+        let storeUrl = directory.appendingPathComponent("test_iOS_Ingima.sqlite")
+        
+        /*let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+        let storeUrl = URL(fileURLWithPath: documentsPath.appendingPathComponent("CoreDataPrepopulate.sqlite"))*/
+        
+        print("Stror URL: ", storeUrl)
+        //let storeUrl = applicationDocumentsDirectory.appendingPathComponent("CoreDataPrepopulate.sqlite")
+        
+        if !FileManager.default.fileExists(atPath: (storeUrl.path)) {
+            print("not exist")
+            if let seededDataUrl = Bundle.main.url(forResource: seededData, withExtension: "sqlite") {
+                print("lets copy")
+                print("seededDataUrl", seededDataUrl)
+                try! FileManager.default.copyItem(at: seededDataUrl, to: storeUrl)
+            }
+        }
+        
+        
+        
+        container.persistentStoreDescriptions = [NSPersistentStoreDescription(url: storeUrl)]
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

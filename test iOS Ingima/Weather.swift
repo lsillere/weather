@@ -22,6 +22,8 @@ public struct Weather:Decodable {
     public var sunset: Date?
     public var visibility: Int?
     public var cityId: Int?
+    public var countryCode: String?
+    
     
     public var tempMin: Double?
     public var tempMax: Double?
@@ -35,6 +37,9 @@ public struct Weather:Decodable {
             }
             if let sunset: Double = "sunset" <~~ sys {
                 self.sunset = Date(timeIntervalSince1970: sunset)
+            }
+            if let country: String = "country" <~~ sys {
+                self.countryCode = country
             }
         }
         
@@ -61,6 +66,10 @@ public struct Weather:Decodable {
         
         if let cityId: Int = "id" <~~ jsonToday {
             self.cityId = cityId
+        }
+        
+        if let date: Double = "dt" <~~ jsonToday {
+            self.date = Date(timeIntervalSince1970: date)
         }
         
         let weather: [WeatherInfo]?
@@ -111,8 +120,8 @@ public struct Weather:Decodable {
             self.tempMax = tempMax
         }
         
-        if let date: Date = Date(timeIntervalSince1970: ("dt" <~~ json)!) {
-            self.date = date
+        if let date: Double = "dt" <~~ json {
+            self.date = Date(timeIntervalSince1970: date)
         }
         
         let weather: [WeatherInfo]?

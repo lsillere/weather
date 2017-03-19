@@ -11,7 +11,7 @@ import Gloss
 
 public class Cities: Decodable {
     
-    public var cities: [City]?
+    public var cities: [CitySaved]?
     
     public required init?(json: JSON) {
         cities = "cities" <~~ json
@@ -19,14 +19,13 @@ public class Cities: Decodable {
     
 }
 
-public class City: Decodable {
+public class CitySaved: Decodable {
     public var id: Int?
     public var country: String?
     public var name: String?
     public var lat: String?
     public var long: String?
     public var weather: Weather?
-    var test = ""
     
     public required init?(json: JSON) {
         self.id = ("_id" <~~ json)!
@@ -67,7 +66,6 @@ public class City: Decodable {
                             self.weather  = Weather.init(jsonToday: json)!
                             
             })
-            print("json", self.weather)
         }
     }
 }

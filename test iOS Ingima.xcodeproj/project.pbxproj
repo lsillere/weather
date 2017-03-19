@@ -11,9 +11,12 @@
 		761AC1D11E79D62C000DBC3A /* forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D01E79D62C000DBC3A /* forecast.swift */; };
 		761AC1D31E79F058000DBC3A /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D21E79F058000DBC3A /* WeatherTableViewCell.swift */; };
 		761AC1D51E79FEE1000DBC3A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AC1D41E79FEE1000DBC3A /* Weather.swift */; };
+		765B8E161E7E0543001FDBCE /* test_iOS_Ingima.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 765B8E131E7E0542001FDBCE /* test_iOS_Ingima.sqlite */; };
+		765B8E171E7E0543001FDBCE /* test_iOS_Ingima.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 765B8E141E7E0542001FDBCE /* test_iOS_Ingima.sqlite-shm */; };
+		765B8E181E7E0543001FDBCE /* test_iOS_Ingima.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 765B8E151E7E0542001FDBCE /* test_iOS_Ingima.sqlite-wal */; };
 		765FC8311E7C08D200679DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765FC8301E7C08D100679DDB /* Main.storyboard */; };
 		76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DA81E79C64E001AF558 /* AppDelegate.swift */; };
-		76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAA1E79C64E001AF558 /* ViewController.swift */; };
+		76656DAB1E79C64E001AF558 /* DetailCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAA1E79C64E001AF558 /* DetailCityViewController.swift */; };
 		76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76656DAF1E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld */; };
 		76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB21E79C64E001AF558 /* Assets.xcassets */; };
 		76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76656DB41E79C64E001AF558 /* LaunchScreen.storyboard */; };
@@ -57,10 +60,13 @@
 		761AC1D01E79D62C000DBC3A /* forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = forecast.swift; sourceTree = "<group>"; };
 		761AC1D21E79F058000DBC3A /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		761AC1D41E79FEE1000DBC3A /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		765B8E131E7E0542001FDBCE /* test_iOS_Ingima.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_iOS_Ingima.sqlite; sourceTree = "<group>"; };
+		765B8E141E7E0542001FDBCE /* test_iOS_Ingima.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test_iOS_Ingima.sqlite-shm"; sourceTree = "<group>"; };
+		765B8E151E7E0542001FDBCE /* test_iOS_Ingima.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "test_iOS_Ingima.sqlite-wal"; sourceTree = "<group>"; };
 		765FC8301E7C08D100679DDB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76656DA51E79C64E001AF558 /* test iOS Ingima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test iOS Ingima.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76656DA81E79C64E001AF558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76656DAA1E79C64E001AF558 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76656DAA1E79C64E001AF558 /* DetailCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCityViewController.swift; sourceTree = "<group>"; };
 		76656DB01E79C64E001AF558 /* test_iOS_Ingima.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test_iOS_Ingima.xcdatamodel; sourceTree = "<group>"; };
 		76656DB21E79C64E001AF558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76656DB51E79C64E001AF558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -164,10 +170,13 @@
 		76656DA71E79C64E001AF558 /* test iOS Ingima */ = {
 			isa = PBXGroup;
 			children = (
+				765B8E131E7E0542001FDBCE /* test_iOS_Ingima.sqlite */,
+				765B8E141E7E0542001FDBCE /* test_iOS_Ingima.sqlite-shm */,
+				765B8E151E7E0542001FDBCE /* test_iOS_Ingima.sqlite-wal */,
 				76CBD6841E7AB16D005B95CB /* Resources */,
 				761AC1CF1E79D616000DBC3A /* Model */,
 				76656DA81E79C64E001AF558 /* AppDelegate.swift */,
-				76656DAA1E79C64E001AF558 /* ViewController.swift */,
+				76656DAA1E79C64E001AF558 /* DetailCityViewController.swift */,
 				76CBD68F1E7AC602005B95CB /* MyCityListTableViewController.swift */,
 				76CBD6891E7AB429005B95CB /* SearchCityViewController.swift */,
 				76CBD6911E7AC7BC005B95CB /* CoredataManager.swift */,
@@ -343,7 +352,10 @@
 			files = (
 				76656DB61E79C64E001AF558 /* LaunchScreen.storyboard in Resources */,
 				765FC8311E7C08D200679DDB /* Main.storyboard in Resources */,
+				765B8E161E7E0543001FDBCE /* test_iOS_Ingima.sqlite in Resources */,
+				765B8E171E7E0543001FDBCE /* test_iOS_Ingima.sqlite-shm in Resources */,
 				76656DB31E79C64E001AF558 /* Assets.xcassets in Resources */,
+				765B8E181E7E0543001FDBCE /* test_iOS_Ingima.sqlite-wal in Resources */,
 				76CBD68E1E7ABE46005B95CB /* cityListFrance.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,7 +525,7 @@
 				76CBD6881E7AB219005B95CB /* city.swift in Sources */,
 				76656DB11E79C64E001AF558 /* test_iOS_Ingima.xcdatamodeld in Sources */,
 				76CBD6941E7B13DE005B95CB /* APIManager.swift in Sources */,
-				76656DAB1E79C64E001AF558 /* ViewController.swift in Sources */,
+				76656DAB1E79C64E001AF558 /* DetailCityViewController.swift in Sources */,
 				761AC1D51E79FEE1000DBC3A /* Weather.swift in Sources */,
 				76CBD6921E7AC7BC005B95CB /* CoredataManager.swift in Sources */,
 				76656DA91E79C64E001AF558 /* AppDelegate.swift in Sources */,
